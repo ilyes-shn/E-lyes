@@ -19,7 +19,7 @@ const Login = () => {
             <AccountCircleOutlinedIcon style={{fontSize: '30px'}}/>
             <TextField required id="standard-basic" label="Email" style={{marginTop:'15px'}} />
             <TextField required id="standard-basic" label="Password" type="password" style={{marginTop:'15px'}}/>
-            <p>By continuing, you agree to Amazon's Conditions of Use and Privacy Notice. </p>
+            <p>By continuing, you agree to Elyes's Conditions of Use and Privacy Notice. </p>
             <div className="btn">
             <Button style={{margin: '0px 20px'}} variant="contained">Sign up</Button>
             <Button style={{margin: '0px 20px'}} variant="contained" color="primary">Log in</Button>
