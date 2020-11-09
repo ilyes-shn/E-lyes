@@ -34,9 +34,7 @@ const products = [
  ]
   return (
     <Layout>
-      <div className='cover'>
-        <img className='img' src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Arzew_-_4.jpg" alt="schutt product"/>
-      </div>
+      <div className='cover'></div>
       <div className="container">
         <h2>Products</h2>
       <div className='products'>
@@ -49,16 +47,11 @@ const products = [
 		        height: 300px;
 		        overflow: hidden;
             margin-top: 50px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Arzew_-_4.jpg');
+            background-position: center;
+            background-size: cover;
           }
 
-          .img {
-            width: 100%;
-            transition: .5s ease;
-          }
-
-          .img:hover {
-            transform: scale(1.05)
-          }
           .container {
             padding: 40px;
             min-height: 100vh;
