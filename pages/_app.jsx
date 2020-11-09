@@ -4,7 +4,7 @@ import '../styles/main.css'
 function App({ Component, pageProps }) {
   return (
     <Provider>
-        <Component {...pageProps} /> 
+        <Component {...pageProps} />
     </Provider>
   )
 }

@@ -16,20 +16,9 @@ body {
   .log-img {
       transform: translateY(50px);
   }
-  .products {
-    overflow-x: scroll;
-    display: flex;
-    flex-direction: column;
-    grid-column-gap: 20px;
-    padding: 0px 5px;
-  }
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .cover {
-  mask-image: linear-gradient(to top, transparent, #f0f0f0);
   z-index: -1;
 }

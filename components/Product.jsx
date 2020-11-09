@@ -25,28 +25,27 @@ return(
       </div>
       <div className='title'>
         <h4>{title}</h4>
-        <h4 style={{color: 'green'}}><CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h4>
+        <h5 style={{color: 'green'}}><CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h5>
       </div>
       <Button onClick={addToCart} style={{margin: '10px 0px'}} variant="outlined" color="primary">Add to cart</Button>
 
     </div>
     <style jsx>{`
         .product_container {
-          width: 200px;
-          height: 350px;
+          width: 170px;
+          height: 250px;
           background-color: white;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin-top: 30px;
           padding: 0px 7px;
           border-radius: 8px;
           box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
         }
 
         img {
-          width: 200px;
+          height: 150px;
         }
 
         .img_container {
