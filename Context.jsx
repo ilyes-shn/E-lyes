@@ -14,7 +14,7 @@ const Reducer = (state,action) => {
     }
       break;
     case 'remove':
-    const index = action.id
+    const index = 1
     console.log(index)
     let newBasket = [...state.basket]
     if (index >= 0){
