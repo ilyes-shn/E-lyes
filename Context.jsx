@@ -15,7 +15,7 @@ const Reducer = (state,action) => {
       break;
     case 'remove':
     const index = 1
-    console.log(index)
+    console.log(action.id)
     let newBasket = [...state.basket]
     if (index >= 0){
       newBasket.splice(index, 1);
