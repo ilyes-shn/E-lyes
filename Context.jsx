@@ -13,6 +13,11 @@ const Reducer = (state,action) => {
       basket: [...state.basket, action.item]
     }
       break;
+    case 'remove': return {
+      ...state,
+      basket: [...state.basket.splice(action.id,1)]
+    }
+      break;
     default: return state
   }
 }
