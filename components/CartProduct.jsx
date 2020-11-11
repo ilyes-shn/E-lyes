@@ -19,7 +19,7 @@ const remove = () => {
         <h5>{title}</h5>
         <h4><CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalScale={2}/></h4>
       </div>
-      <Button variant="outlined" onClick={remove}>Remove</Button>
+      <button onClick={remove} style={{backgroundColor: 'red', border: 'none', height: '30px', padding: '7px', outline: 'none', color: 'white', borderRadius: '3px', cursor: 'pointer'}}>Remove</button>
       <style jsx>{`
           .product {
             height: 150px;
