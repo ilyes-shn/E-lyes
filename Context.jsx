@@ -13,9 +13,15 @@ const Reducer = (state,action) => {
       basket: [...state.basket, action.item]
     }
       break;
-    case 'remove': return {
+    case 'remove':
+    const index = action.id
+    let newBasket = [...state.basket]
+    if (index >= 0){
+      newBasket.splice(index, 1);
+    }
+    return {
       ...state,
-      basket: [...state.basket.splice(action.id,1)]
+      basket: newBasket
     }
       break;
     default: return state
