@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 
 const CartProduct = ({title,price,image, id}) => {
   const [{basket},dispach] = useData()
-
+console.log(id)
 const remove = (id) => {
   dispach({
     type: 'remove',
