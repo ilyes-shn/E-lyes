@@ -50,7 +50,7 @@ const Nav = () => {
     .nav {
         width: 100%;
         height: 50px;
-        background: #071a52;
+        background: #000000;
         position: fixed;
         top: 0;
         z-index: 5;

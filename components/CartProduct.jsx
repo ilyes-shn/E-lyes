@@ -26,8 +26,9 @@ const remove = () => {
             width: 100%;
             display: flex;
             padding; 10px;
+            margin-bottom: 5px;
             align-items: center;
-          }
+            }
 
           .product img {
             height: 90px;
@@ -36,6 +37,7 @@ const remove = () => {
           .disc {
             flex: 1;
             padding-left: 10px;
+            color: white
           }
       `}</style>
     </div>
