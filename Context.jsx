@@ -3,7 +3,8 @@ import {useContext, createContext, useReducer} from 'react'
 const dataContext = createContext();
 
 const initialState = {
-  basket: []
+  basket: [],
+  user: null
 }
 
 const Reducer = (state,action) => {
@@ -22,6 +23,11 @@ const Reducer = (state,action) => {
     return {
       ...state,
       basket: newBasket
+    }
+      break;
+    case 'user': return {
+      ...state,
+      user: action.user
     }
       break;
     default: return state

@@ -3,10 +3,17 @@ import Link from 'next/link'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import {useData} from '../Context'
+import {auth} from '../fireConfig'
 
 const Nav = () => {
-  const [{basket},dispach] = useData()
-
+  const [{basket,user},dispach] = useData()
+  const logOut = () => {
+    auth.signOut()
+    dispach({
+      type: 'user',
+      user: null
+    })
+  }
     return (
         <div>
             <div className='nav'>
@@ -20,12 +27,17 @@ const Nav = () => {
                     <input type="text" placeholder="Search ..."/>
                 </div>
                 <div className="options">
-                    <Link href='login'>
+                  {
+                    user ? (<p style={{color: 'white',padding: '3px 5px',borderRadius: '5px', background: 'grey', cursor: 'pointer'}} onClick={logOut}>Log out</p>) : (<Link href='login'>
                     <div className='account'>
                         <p>Hello</p>
                         <p>Sign In</p>
                     </div>
-                    </Link>
+                    </Link>)
+                  }
+
+
+
                     <Link href='/cart'>
                     <div className='cart'>
                         <ShoppingCartOutlinedIcon style={{color:'white', margin: '0px 5px'}} />

@@ -21,7 +21,7 @@ const amount = basket.reduce((total, item) => total+item.price,0)
           </div>
           </div>
           <div className='shopItems'>
-              <h3>Shopping list</h3>
+              <h3 style={{color: 'white'}}>Shopping list</h3>
               {
                 basket.map((item,index) => {
                   return (

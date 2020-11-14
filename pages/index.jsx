@@ -4,7 +4,7 @@ import Product from '../components/Product'
 
 
 const Home = () => {
-const [{basket},dispach] = useData()
+const [{basket, user},dispach] = useData()
 const products = [
   {
    title:'Iphone 12',
@@ -34,48 +34,41 @@ const products = [
  ]
   return (
     <Layout>
-      <div className='cover'></div>
       <div className="container">
-        <h2>Products</h2>
+        {user && <div><h2 style={{color: 'white'}}>Welcome back <span style={{color: 'orange'}}>{user}</span></h2><hr style={{margin: '20px'}}/></div>}
+        <h2 id='h2'>Products</h2>
       <div className='products'>
         { products.map((item) => <div key={item.title} className='item'><Product title={item.title} price={item.price} image={item.image} /></div>)}
       </div>
       </div>
       <style jsx>{`
-          .cover {
-            width: 100%;
-		        height: 300px;
-		        overflow: hidden;
-            margin-top: 50px;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Arzew_-_4.jpg');
-            background-position: center;
-            background-size: cover;
-          }
 
-          .container {
-            padding: 40px;
-            min-height: 100vh;
-          }
+        .container {
+          padding: 40px;
+          min-height: 100vh;
+          margin-top: 50px;
+        }
 
-          .products {
-              display: flex;
-              width: 100%;
-              overflow-x: scroll;
-              padding-right: 15px;
-          }
-
-          .item {
+        .products {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 15px 15px;
-          }
+            width: 100%;
+            overflow-x: scroll;
+            padding-right: 15px;
+        }
 
-          h2 {
-            margin-bottom : 30px;
-          }
-        `}
-      </style>
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 15px 15px;
+        }
+
+        #h2 {
+          margin-bottom : 30px;
+          color: white;
+        }
+
+      `}</style>
     </Layout>
   )
 };
