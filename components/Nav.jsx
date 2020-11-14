@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import {useData} from '../Context'
 import {auth} from '../fireConfig'
 
@@ -28,7 +29,7 @@ const Nav = () => {
                 </div>
                 <div className="options">
                   {
-                    user ? (<p style={{color: 'white',padding: '3px 5px',borderRadius: '5px', background: 'grey', cursor: 'pointer'}} onClick={logOut}>Log out</p>) : (<Link href='login'>
+                    user ? (<ExitToAppOutlinedIcon onClick={logOut} style={{color:'white', margin: '0px 5px', cursor: 'pointer'}}/>) : (<Link href='login'>
                     <div className='account'>
                         <p>Hello</p>
                         <p>Sign In</p>

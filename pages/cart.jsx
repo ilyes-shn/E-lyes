@@ -4,7 +4,7 @@ import {useData} from '../Context'
 import CurrencyFormat from 'react-currency-format'
 import Button from '@material-ui/core/Button';
 import CartProduct from '../components/CartProduct'
-
+import CreditCardOutlinedIcon from '@material-ui/icons/CreditCardOutlined';
 
 const Cart = () => {
 const [{basket},dispach] = useData()
@@ -15,8 +15,9 @@ const amount = basket.reduce((total, item) => total+item.price,0)
         <div className='cart'>
           <div style={{display: 'flex',justifyContent: 'center'}}>
           <div className='checkout'>
+            <CreditCardOutlinedIcon style={{width: '100%'}}/>
             <h2>Checkout</h2>
-            <h4>Amount to pay <CurrencyFormat value={amount} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalScale={2}/></h4>
+            <h4>Amount to pay <span style={{fontSize: '26px'}}><CurrencyFormat value={amount} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalScale={2}/></span></h4>
             <Button variant="contained" color="primary" onClick={() => alert('Psahtek ;)')}>Purchase</Button>
           </div>
           </div>

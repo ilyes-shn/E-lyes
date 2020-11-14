@@ -1,6 +1,7 @@
 import CurrencyFormat from 'react-currency-format'
 import {useData} from '../Context'
 import Button from '@material-ui/core/Button';
+import HighlightOffOutlinedIcon from '@material-ui/icons/HighlightOffOutlined';
 
 
 const CartProduct = ({title,price,image, id}) => {
@@ -19,7 +20,7 @@ const remove = () => {
         <h5>{title}</h5>
         <h4><CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalScale={2}/></h4>
       </div>
-      <button onClick={remove} style={{backgroundColor: 'red', border: 'none', height: '30px', padding: '7px', outline: 'none', color: 'white', borderRadius: '3px', cursor: 'pointer'}}>Remove</button>
+      <HighlightOffOutlinedIcon onClick={remove} style={{color: 'red',cursor: 'pointer', fontSize: '35px'}} />
       <style jsx>{`
           .product {
             height: 150px;
